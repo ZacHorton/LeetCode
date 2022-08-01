@@ -3,15 +3,15 @@ from typing import List
 
 class Solution:
     def runningSum(self, nums: List[int]) -> List[int]:
-        return_list = []
+        prefix_sum = []
         total = 0
-        for index in range(len(nums)):
-            total += nums[index]
-            return_list.append(total)
+        for num in nums:
+            total += num
+            prefix_sum.append(total)
 
-        return return_list
+        return prefix_sum
 
 """
-Runtime: 46 ms, faster than 85.31% of Python3 online submissions for Running Sum of 1d Array.
-Memory Usage: 14.1 MB, less than 71.44% of Python3 online submissions for Running Sum of 1d Array.
+Runtime: 61 ms, faster than 56.65% of Python3 online submissions for Running Sum of 1d Array.
+Memory Usage: 14.1 MB, less than 26.83% of Python3 online submissions for Running Sum of 1d Array.
 """
