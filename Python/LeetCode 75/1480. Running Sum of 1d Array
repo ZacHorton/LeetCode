@@ -12,6 +12,8 @@ class Solution:
         return prefix_sum
 
 """
+Time:
+Space:
 Runtime: 61 ms, faster than 56.65% of Python3 online submissions for Running Sum of 1d Array.
 Memory Usage: 14.1 MB, less than 26.83% of Python3 online submissions for Running Sum of 1d Array.
 """
