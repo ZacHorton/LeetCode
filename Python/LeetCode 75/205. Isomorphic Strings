@@ -1,0 +1,32 @@
+# 205. Isomorphic Strings
+from typing import List
+
+class Solution:
+    def isIsomorphic(self, s: str, t: str) -> bool:
+        unique_chars_s, unique_chars_t = [], []
+        for char in s:
+            if char not in unique_chars_s:
+                unique_chars_s.append(char)
+        for char in t:
+            if char not in unique_chars_t:
+                unique_chars_t.append(char)
+
+        d, new_word = {}, ''
+        for a, b in zip(unique_chars_s, unique_chars_t):
+            d[a] = b
+        if len(unique_chars_s) == len(unique_chars_t):
+            for char in s:
+                new_word += d[char]
+            if new_word == t:
+                return True
+            else:
+                return False
+        else:
+            return False
+
+"""
+Time: 
+Space: 
+Runtime: 204 ms, faster than 5.02% of Python3 online submissions for Isomorphic Strings.
+Memory Usage: 14.3 MB, less than 45.52% of Python3 online submissions for Isomorphic Strings.
+"""
